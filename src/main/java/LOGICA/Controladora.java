@@ -4,6 +4,8 @@ package LOGICA;
 
 import PERSISTENCIA.ControladoraPersistencia;
 
+import java.util.List;
+
 
 
 
@@ -21,5 +23,11 @@ public class Controladora {
         
         controlPersis.crearPerfil(perf);
       }  
-    }
 
+    public List<Perfil> getPerf() {
+    
+    return controlPersis.getPerfil();
+    
+        } 
+    
+     }

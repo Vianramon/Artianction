@@ -12,15 +12,19 @@ import javax.persistence.InheritanceType;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
+/**
+ *
+ * @author vramirez
+ */
 @Entity
-@Inheritance (strategy= InheritanceType.TABLE_PER_CLASS)
+@Inheritance (strategy= InheritanceType.JOINED )
 
-public class Usuario implements Serializable {
+public class  Usuario implements Serializable {
     
 @Id
 @GeneratedValue (strategy = GenerationType.IDENTITY)
 
-private int id;
+ private int id;
  private String dni;
  private String nombre;
  private String apellido;

@@ -5,6 +5,8 @@
 package PERSISTENCIA;
 
 import LOGICA.Perfil;
+import java.util.ArrayList;
+import java.util.List;
 
 public class ControladoraPersistencia {
     
@@ -25,4 +27,8 @@ public class ControladoraPersistencia {
     PerfJPA.create(perf);
            
 }
+
+    public List<Perfil> getPerfil() {
+    return PerfJPA.findPerfilEntities();
 }
+    }

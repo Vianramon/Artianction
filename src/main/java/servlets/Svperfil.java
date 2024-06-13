@@ -2,6 +2,7 @@
 package servlets;
 
 import LOGICA.Controladora;
+import LOGICA.Perfil;
 
 
 import java.io.IOException;
@@ -10,6 +11,10 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
+import java.util.ArrayList;
+import java.util.List;
+
 
 
 
@@ -28,9 +33,19 @@ public class Svperfil extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+       
+        
+        List<Perfil> listaPerfil= new ArrayList<Perfil>();
+        listaPerfil=control.getPerf ();
+        
+        HttpSession misession=  request.getSession ();
+        misession.setAttribute ( "listaPerfil", listaPerfil);
+        
+        System.out.println("Perfil" + listaPerfil.get (0));
+        response.sendRedirect("verArtistas.jsp");
     }
 
+    
     
    
     @Override
