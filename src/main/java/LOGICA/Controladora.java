@@ -24,10 +24,27 @@ public class Controladora {
         controlPersis.crearPerfil(perf);
       }  
 
-    public List<Perfil> getPerf() {
-    
+    public List<Perfil> getPerfil() {
+       
     return controlPersis.getPerfil();
     
         } 
+
+    public void borrarPerfil(int id) {
+    controlPersis.borrarPerfil(id);
+    }
+
+ 
+    public Perfil datosPerfil(int id) {
+        return controlPersis.datosPerfil (id);
+    }
+
+    public void editarPerfil(Perfil perf) {
+    controlPersis.editarPerfil (perf);    
+
+    }
+   
+        
     
      }
+ 

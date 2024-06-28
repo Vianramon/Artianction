@@ -73,6 +73,7 @@
                         <a class="collapse-item" href="">Blog</a>
                     </div>
                     
+                    </div>
                     <!-- Nav Item - Utilities Collapse Menu -->
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
@@ -101,9 +102,8 @@
                     data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Acciones:</h6>
-                        <a class="collapse-item" href="">Nombre del perfil</a>
-                        <a class="collapse-item" href="">Password</a>
-                        <a class="collapse-item" href="">Rol</a>
+                        
+                         <a class="collapse-item" href="Svperfil">Ver Expositores de arte</a>
                          <a class="collapse-item" href="altaPerfil.jsp">Alta Perfil</a>
                        
                 </div>
