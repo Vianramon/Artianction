@@ -37,7 +37,7 @@ public class Sveliminarperfil extends HttpServlet {
         
         int id= Integer.parseInt(request.getParameter("id"));
         control.borrarPerfil(id);
-        response.sendRedirect("VerexpositoresArte.jsp");
+        response.sendRedirect("Svperfil");
         
     }
 

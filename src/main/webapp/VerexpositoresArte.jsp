@@ -72,7 +72,7 @@
                                                </form>
                                                     
                                                   <form name ="editar" action="Sveditarperfil" method="GET">
-                                             <button  type="submit" class="btn btn-primary btn-user btn-block" style="margin-left: 5px;">
+                                             <button  type="submit" class="btn btn-primary btn-user btn-block"; style="margin-left: 5px;">
                                                  <i class ="fas fa-pencil-alt"> </i> Editar
                                              </button>
                                                   

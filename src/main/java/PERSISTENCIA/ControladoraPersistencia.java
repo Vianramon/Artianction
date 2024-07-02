@@ -2,6 +2,7 @@
 package PERSISTENCIA;
 
 import LOGICA.Perfil;
+import LOGICA.Usuario;
 import PERSISTENCIA.exceptions.NonexistentEntityException;
 import java.util.ArrayList;
 import java.util.List;
@@ -54,4 +55,7 @@ public class ControladoraPersistencia{
            Logger.getLogger(ControladoraPersistencia.class.getName()).log(Level.SEVERE, null, ex);
        }
     }
+
+   
+    
         }

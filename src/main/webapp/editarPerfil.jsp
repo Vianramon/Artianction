@@ -17,21 +17,22 @@
                                     </div>
                                     <div class="col-sm-6 mb-3">
                                         <input type="password" class="form-control" id="example Contraseña"
-                                           name="password" placeholder="Contraseña" value="<%=perf.getPassword()%>
+                                           name="password" placeholder="Contraseña" value="<%=perf.getPassword()%>">
                                     </div>
                                     
                                     <div class="col-sm-6 mb-3">
                                         <input type="text" class="form-control" id="example Rol"
-                                           name="Rol" placeholder="Rol" value="<%=perf.getRol()%>
+                                           name="Rol" placeholder="Rol" value="<%=perf.getRol()%>">
                                     
+                               
+                              </div>
                                     
-                                    
-                                </div>
-                                
-    
-                                <button class = " btn-primary btn-user btn-block" type="submit">
-                                   Confirmar Cambios 
-                                </button>
+                                   </div>
+                           
+                            
+                                <button  type="submit" class="btn btn-primary btn-user btn-block">
+                                                Confirmar cambios 
+                                             </button>
                                
                             </form>
 

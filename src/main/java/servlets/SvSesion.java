@@ -1,6 +1,7 @@
 
 package servlets;
 
+
 import LOGICA.Controladora;
 import LOGICA.Perfil;
 
@@ -13,53 +14,45 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
 
+@WebServlet(name = "SvSesion", urlPatterns = {"/SvSesion"})
+public class SvSesion extends HttpServlet {
 
-
-@WebServlet(name = "Sveditarperfil", urlPatterns = {"/Sveditarperfil"})
-public class Sveditarperfil extends HttpServlet {
-
-    Controladora control = new Controladora();
-    
+   
+   Controladora control = new Controladora();
+   
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         
         }
-   
+    
 
     
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        
-        int id= Integer.parseInt(request.getParameter("id"));
-        Perfil perf = control.datosPerfil(id);
-        
-        HttpSession sessionperfil= request.getSession ();
-        sessionperfil.setAttribute("datosPerfil", perf);
-        
-        System.out.println("El perfil es:"+perf.getNombreUsuario());
-        response.sendRedirect("editarPerfil.jsp");
+        processRequest(request, response);
     }
 
-    
+   
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         
+        String NombreUsuario= request.getParameter("NombreUsuario");
+        String Password= request.getParameter("Password");
         
-    String NombreUsuario = request.getParameter ("NombreUsuario");
-    String password= request.getParameter ("password");
-    String Rol=request.getParameter ("Rol");
-    
-   Perfil perf =(Perfil) request.getSession ().getAttribute("datosPerfil");
-  
-        perf.setNombreUsuario(NombreUsuario);
-        perf.setPassword(password);
-        perf.setRol(Rol);
+        boolean confirmacion=false;
+        confirmacion = control.confirmardatos (NombreUsuario,Password);
         
-        control.editarPerfil(perf);
         
-        response.sendRedirect("Svperfil");
+        if (confirmacion==true){
+              HttpSession datos= request.getSession(true);
+              datos.setAttribute("NombreUsuario",NombreUsuario) ;
+              response.sendRedirect("index.jsp");
+        }
+        else {
+            response.sendRedirect("datosErrados.jsp");
+        }
         
     }
 

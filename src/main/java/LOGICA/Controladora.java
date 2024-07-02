@@ -3,6 +3,8 @@ package LOGICA;
 
 
 import PERSISTENCIA.ControladoraPersistencia;
+import java.util.ArrayList;
+
 
 import java.util.List;
 
@@ -43,8 +45,26 @@ public class Controladora {
     controlPersis.editarPerfil (perf);    
 
     }
-   
-        
+
+    public boolean confirmardatos(String NombreUsuario, String Password) {
     
-     }
- 
+        
+        boolean confirmardatos= false;
+        List<Perfil>listaPerfil = new ArrayList<Perfil>();
+    listaPerfil =controlPersis.getPerfil(); 
+    
+    for (Perfil perf: listaPerfil) {
+    if( perf.getNombreUsuario().equals(NombreUsuario)){
+        if(perf.getPassword().equals (Password)){
+            confirmardatos = true;
+    }
+
+ else {
+           confirmardatos=false;
+            }
+        }
+    }
+        return  confirmardatos;
+      }
+        
+      }

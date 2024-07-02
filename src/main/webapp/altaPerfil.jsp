@@ -22,10 +22,7 @@
                                         <input type="text" class="form-control" id="example Rol"
                                            name="Rol" placeholder="Rol">
                                     </div>
-                                    
-                                    
-                                </div>
-                                
+                                    </div>
     
                                 <button class = " btn-primary btn-user btn-block" type="submit">
                                    Crear Perfil
