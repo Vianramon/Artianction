@@ -49,22 +49,27 @@ public class Controladora {
     public boolean confirmardatos(String NombreUsuario, String Password) {
     
         
-        boolean confirmardatos= false;
+      boolean confirmacion= false;
         List<Perfil>listaPerfil = new ArrayList<Perfil>();
     listaPerfil =controlPersis.getPerfil(); 
     
     for (Perfil perf: listaPerfil) {
     if( perf.getNombreUsuario().equals(NombreUsuario)){
         if(perf.getPassword().equals (Password)){
-            confirmardatos = true;
+          confirmacion= true;
+          return confirmacion;
     }
+         
 
  else {
-           confirmardatos=false;
+           confirmacion= false;
+           return confirmacion;
             }
         }
     }
-        return  confirmardatos;
+        return  confirmacion;
       }
+
+   
         
       }

@@ -41,14 +41,15 @@ public class SvSesion extends HttpServlet {
         String NombreUsuario= request.getParameter("NombreUsuario");
         String Password= request.getParameter("Password");
         
-        boolean confirmacion=false;
+       boolean confirmacion=false;
         confirmacion = control.confirmardatos (NombreUsuario,Password);
+      
         
         
         if (confirmacion==true){
-              HttpSession datos= request.getSession(true);
-              datos.setAttribute("NombreUsuario",NombreUsuario) ;
-              response.sendRedirect("index.jsp");
+            HttpSession datos= request.getSession(true);
+            datos.setAttribute("NombreUsuario",NombreUsuario) ;
+            response.sendRedirect("index.jsp");
         }
         else {
             response.sendRedirect("datosErrados.jsp");
