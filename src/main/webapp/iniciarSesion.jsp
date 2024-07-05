@@ -52,8 +52,8 @@
                                         <div class="form-group">
                                             
                                             <input type="NombreUsuario" class="form-control form-control-user"
-                                                id="NombreUsuario" 
-                                                placeholder="Usuario">
+                                                id="NombreUsuario"  name="NombreUsuario"
+                                            placeholder="Usuario">
                                         </div>
                                         <div class="form-group">
                                             <input type="Password" class="form-control form-control-user"
