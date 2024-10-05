@@ -51,10 +51,10 @@
                                     <form class="user" action="SvSesion" method="POST">
                                        
                                         
-                                        <p>Valida los datos de usuario y clave ingresados</p>
+                                        <p>Registra tus credenciales  para ingresar Artinaction</p>
                                       
                                        <a href="iniciarSesion.jsp" class="btn btn-primary btn-user btn-block">
-                                       Regresa a iniciar sesiòn 
+                                       Ir a iniciar sesiòn 
                                        </a>
                                        
                                         <br>
@@ -87,7 +87,3 @@
     <script src="js/sb-admin-2.min.js"></script>
 
 </body>
-
-    
-    
-

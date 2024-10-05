@@ -36,8 +36,8 @@
                     <div class="card-body p-0">
                         <!-- Nested Row within Card Body -->
                         <div class="row">
-                            <div class="col-lg-6 d-none d-lg-block bg-login-image"></div>
-                            
+                            <div class="col-lg-6 d-none d-lg-block bg-login-image"style="background-repeat:no-repeat"></div>
+                          
                             
 
 
@@ -64,16 +64,11 @@
                                                 Ingresa a tu galeria de arte digital
                                              </button>
                                        
-                                        <hr>
+                                      
                                         
                                     </form>
-                                    <hr>
-                                    <div class="text-center">
-                                      
-                                    </div>
-                                    <div class="text-center">
-                                        
-                                    </div>
+                                    
+                                    
                                 </div>
                             </div>
                         </div>
