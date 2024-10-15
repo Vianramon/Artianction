@@ -36,8 +36,13 @@
                     <div class="card-body p-0">
                         <!-- Nested Row within Card Body -->
                         <div class="row">
-                            <div class="col-lg-6 d-none d-lg-block bg-login-image"style="background-repeat:no-repeat"></div>
+                            <div class="col-lg-6 d-none d-lg-block bg-login-image"style="background-repeat:no-repeat">
                             
+                             <img src="https://img.freepik.com/foto-gratis/textura-manchas-colores_23-2147611854.jpg?t=st=1728442194~exp=1728445794~hmac=588e7f59f98711f3ff175008bd294d9f37cc0349c545994ead882e70e980a965&w=360" alt="alt"/>
+
+
+
+</div>
                             
 
 
